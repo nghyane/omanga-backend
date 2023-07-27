@@ -1,0 +1,16 @@
+{
+	"dockerFile": "Dockerfile",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/mysql-homebrew:1": {
+			"version": "latest",
+			"database": "example_app"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot"
+			]
+		}
+	}
+}
