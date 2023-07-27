@@ -3,7 +3,8 @@
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/mysql-homebrew:1": {
 			"version": "latest",
-			"database": "example_app"
+			"database": "example_app",
+			"username": "root"
 		}
 	},
 	"customizations": {
