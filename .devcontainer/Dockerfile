@@ -24,8 +24,6 @@ CMD ["mysqld"]
 EXPOSE 3306
 
 
-
-
 # WORKDIR 
 COPY . /app
 WORKDIR /app
