@@ -14,3 +14,14 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 # Start Redis when the container starts
 CMD ["redis-server"]
+
+
+# WORKDIR 
+COPY . /app
+WORKDIR /app
+
+# Install dependencies
+RUN composer install
+
+# Start the application
+CMD ["php", "artisan", "serve"]
