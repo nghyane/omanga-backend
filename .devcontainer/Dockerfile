@@ -11,9 +11,19 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
     php-mysql php-redis composer
 
-
 # Start Redis when the container starts
 CMD ["redis-server"]
+
+# Mysql
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends \
+    mysql-server
+
+CMD ["mysqld"]
+
+EXPOSE 3306
+
+
 
 
 # WORKDIR 
